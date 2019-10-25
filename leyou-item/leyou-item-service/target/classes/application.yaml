@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hm49
+    password: 123456
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5   # 作为服务提供方，有心跳时间
+    lease-expiration-duration-in-seconds: 15   # 过期时间 15s
+mybatis:
+  type-aliases-package: com.leuyou.item.pojo
